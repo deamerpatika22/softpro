@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <hr />
-      <p>&copy Copyright Ecommerce Prodi Sistem Informasi</p>
+      <p>kelompok 2 🚀</p>
     </div>
   </div>
 </div>

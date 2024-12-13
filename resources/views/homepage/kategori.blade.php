@@ -1,139 +1,53 @@
 @extends('layouts.template')
 @section('content')
-<div class="container">
-  <!-- kategori produk -->
-  <div class="row mt-4">
-    <div class="col col-md-12 col-sm-12 mb-4">
-      <h2 class="text-center">Kategori Produk</h2>
-    </div>
-    <!-- kategori pertama -->
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <a href="{{ URL::to('kategori/satu') }}">
-          <img src="{{asset('images/slide1.jpg') }}" alt="foto kategori" class="card-img-top">
-        </a>
-        <div class="card-body">
-          <a href="{{ URL::to('kategori/satu') }}" class="text-decoration-none">
-            <p class="card-text">Kategori Pertama</p>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- kategori kedua -->
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <a href="{{ URL::to('kategori/dua') }}">
-          <img src="{{asset('images/slide1.jpg') }}" alt="foto kategori" class="card-img-top">
-        </a>
-        <div class="card-body">
-          <a href="{{ URL::to('kategori/dua') }}" class="text-decoration-none">
-            <p class="card-text">Kategori Kedua</p>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- kategori ketiga -->
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <a href="{{ URL::to('kategori/tiga') }}">
-          <img src="{{asset('images/slide1.jpg') }}" alt="foto kategori" class="card-img-top">
-        </a>
-        <div class="card-body">
-          <a href="{{ URL::to('kategori/tiga') }}" class="text-decoration-none">
-            <p class="card-text">Kategori Ketiga</p>
-          </a>
-        </div>
-      </div>
-    </div>
+<!-- Kategori Produk / Pricelist -->
+<div class="row mt-4">
+  <div class="col-md-12 text-center">
+    <h2 class="font-weight-bold">Pricelist</h2>
   </div>
-  <!-- end kategori produk -->
-  <!-- produk Terbaru-->
-  <div class="row mt-4">
-    <div class="col col-md-12 col-sm-12 mb-4">
-      <h2 class="text-center">Terbaru</h2>
-    </div>
-    <!-- produk pertama -->
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <a href="{{ URL::to('produk/satu') }}">
-          <img src="{{asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
-        </a>
-        <div class="card-body">
-          <a href="{{ URL::to('produk/satu') }}" class="text-decoration-none">
-            <p class="card-text">
-              Produk Pertama
-            </p>
-          </a>
-          <div class="row mt-4">
-            <div class="col">
-              <button class="btn btn-light">
-                <i class="far fa-heart"></i>
-              </button>
-            </div>
-            <div class="col-auto">
-              <p>
-                Rp. 10.000,00
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- produk kedua -->
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <a href="{{ URL::to('produk/dua') }}">
-          <img src="{{asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
-        </a>
-        <div class="card-body">
-          <a href="{{ URL::to('produk/dua') }}" class="text-decoration-none">
-            <p class="card-text">
-              Produk Kedua
-            </p>
-          </a>
-          <div class="row mt-4">
-            <div class="col">
-              <button class="btn btn-light">
-                <i class="far fa-heart"></i>
-              </button>
-            </div>
-            <div class="col-auto">
-              <p>
-                Rp. 10.000,00
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- produk ketiga -->
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <a href="{{ URL::to('produk/tiga') }}">
-          <img src="{{asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
-        </a>
-        <div class="card-body">
-          <a href="{{ URL::to('produk/tiga') }}" class="text-decoration-none">
-            <p class="card-text">
-              Produk Ketiga
-            </p>
-          </a>
-          <div class="row mt-4">
-            <div class="col">
-              <button class="btn btn-light">
-                <i class="far fa-heart"></i>
-              </button>
-            </div>
-            <div class="col-auto">
-              <p>
-                Rp. 10.000,00
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end produk terbaru -->
 </div>
+
+<!-- 3 Paket Layanan dalam Satu Baris -->
+<div class="row">
+  @foreach ([
+    ['Paket 1', 'Rp 90.000', [
+      '10 menit foto',
+      'Include all soft files',
+      'Include 3 presets',
+      'Include 2 print foto',
+      'Waktu akses google drive 7 hari'
+    ], 'paket 1'],
+    ['Paket 2', 'Rp 130.000', [
+      '20 menit foto',
+      'Include all soft files',
+      'Include 3 presets',
+      'Include 2 print foto',
+      'Waktu akses google drive 7 hari'
+    ], 'paket 2'],
+    ['Paket 3', 'Rp 150.000', [
+      '25 menit foto',
+      'Include all soft files',
+      'Include 3 presets',
+      'Include 2 print foto',
+      'Waktu akses google drive 7 hari'
+    ], 'paket 3']
+  ] as $paket)
+    <div class="col-md-4 mb-4">
+      <div class="border p-4 shadow-sm rounded">
+        <h4 class="text-center font-weight-bold">{{ $paket[0] }}</h4>
+        <ul class="list-unstyled">
+          @foreach ($paket[2] as $item)
+            <li><i class="fas fa-check-circle"></i> {{ $item }}</li>
+          @endforeach
+        </ul>
+        <p class="text-center"><strong>{{ $paket[1] }}</strong></p>
+        <div class="text-center">
+          <a href="https://wa.me/6288215117370?text=Halo,%20saya%20tertarik%20dengan%20paket%20foto%20{{ $paket[3] }}." 
+             target="_blank" class="btn btn-success">Pesan Sekarang</a>
+        </div>
+      </div>
+    </div>
+  @endforeach
+</div>
+
 @endsection
