@@ -1,115 +1,117 @@
 @extends('layouts.dashboard')
 @section('content')
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-6 col-lg-3">
-      <div class="small-box bg-primary">
-        <div class="inner">
-          <h3>150</h3>
+    <!-- Dashboard Overview -->
+    <div class="row">
+        <!-- Order Card -->
+        <div class="col-6 col-lg-3">
+            <div class="small-box bg-light rounded shadow-sm border">
+                <div class="inner">
+                    <h3 class="text-dark">150</h3>
+                    <p class="text-muted">Order Baru</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-camera-retro"></i>
+                </div>
+                <a href="#" class="small-box-footer text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
 
-          <p>Order Baru</p>
+        <!-- Product Card -->
+        <div class="col-6 col-lg-3">
+            <div class="small-box bg-white rounded shadow-sm border">
+                <div class="inner">
+                    <h3 class="text-dark">150</h3>
+                    <p class="text-muted">Produk</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <a href="#" class="small-box-footer text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
         </div>
-        <div class="icon">
-          <i class="ion ion-bag"></i>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-      </div>
-    </div>
-    <div class="col-6 col-lg-3">
-      <div class="small-box bg-info">
-        <div class="inner">
-          <h3>150</h3>
 
-          <p>Produk</p>
+        <!-- Member Card -->
+        <div class="col-6 col-lg-3">
+            <div class="small-box bg-light rounded shadow-sm border">
+                <div class="inner">
+                    <h3 class="text-dark">150</h3>
+                    <p class="text-muted">Member</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <a href="#" class="small-box-footer text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
         </div>
-        <div class="icon">
-          <i class="ion ion-pie-graph"></i>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-      </div>
-    </div>
-    <div class="col-6 col-lg-3">
-      <div class="small-box bg-warning">
-        <div class="inner">
-          <h3>150</h3>
 
-          <p>Member</p>
+        <!-- Transaction Card -->
+        <div class="col-6 col-lg-3">
+            <div class="small-box bg-white rounded shadow-sm border">
+                <div class="inner">
+                    <h3 class="text-dark">150</h3>
+                    <p class="text-muted">Transaksi</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <a href="#" class="small-box-footer text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
         </div>
-        <div class="icon">
-          <i class="ion ion-person-add"></i>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-      </div>
     </div>
 
-    <div class="col-6 col-lg-3">
-      <div class="small-box bg-success">
-        <div class="inner">
-          <h3>150</h3>
-
-          <p>Transaksi</p>
+    <!-- Recent Products Section -->
+ <!--   <div class="row">
+        <div class="col">
+            <div class="card shadow-sm rounded">
+                <div class="card-header bg-dark text-white">
+                    <h4 class="card-title">Produk Baru</h4>
+                    <div class="card-tools">
+                        <a href="#" class="btn btn-sm btn-outline-light">More</a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Kode</th>
+                                <th>Nama</th>
+                                <th>Kategori</th>
+                                <th>Qty</th>
+                                <th>Harga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>CAM-001</td>
+                                <td>Canon EOS R6</td>
+                                <td>Kamera Mirrorless</td>
+                                <td>10 unit</td>
+                                <td>30.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>LENS-002</td>
+                                <td>Canon RF 50mm</td>
+                                <td>Lensa Prime</td>
+                                <td>15 unit</td>
+                                <td>10.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>TRI-003</td>
+                                <td>Manfrotto Tripod</td>
+                                <td>Aksesori Kamera</td>
+                                <td>8 unit</td>
+                                <td>2.500.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div class="icon">
-          <i class="ion ion-stats-bars"></i>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-      </div>
     </div>
-  </div>
-  <!-- table produk baru -->
-  <div class="row">
-    <div class="col">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Produk Baru</h4>
-          <div class="card-tools">
-            <a href="#" class="btn btn-sm btn-primary">
-              More
-            </a>
-          </div>
-        </div>
-        <div class="card-body">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Kode</th>
-                <th>Nama</th>
-                <th>Kategori</th>
-                <th>Qty</th>
-                <th>Harga</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>PRO-1</td>
-                <td>Baju Polo</td>
-                <td>Baju Dewasa</td>
-                <td>12 kodi</td>
-                <td>5.000</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>PRO-2</td>
-                <td>Running Shirt</td>
-                <td>Baju Olahraga</td>
-                <td>20 kodi</td>
-                <td>25.000</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>PRO-3</td>
-                <td>Kaos Kaki</td>
-                <td>Perlengkapan</td>
-                <td>20 kodi</td>
-                <td>125.000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+</div> -->
 @endsection

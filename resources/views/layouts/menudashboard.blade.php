@@ -10,11 +10,27 @@
         </p>
       </a>
     </li>
-    <li class="nav-item has-treeview">
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="nav-icon fa fa-file "></i>
+        <p>
+          History
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="nav-icon fa fa-file "></i>
+        <p>
+          Analytics
+        </p>
+      </a>
+    </li>
+<!--    <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
         <i class="nav-icon fas fa-folder-open"></i>
         <p>
-          Produk
+          Pricelist
           <i class="right fas fa-angle-left"></i>
         </p>
       </a>
@@ -42,9 +58,9 @@
     
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-shopping-cart"></i>
+        <i class="nav-icon fas fa-comment-o"></i>
         <p>
-          Transaksi
+          Chatbot
           <i class="right fas fa-angle-left"></i>
         </p>
       </a>
@@ -52,7 +68,15 @@
         <li class="nav-item">
           <a href="" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Data Transaksi</p>
+            <p>History</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Analitic</p>
           </a>
         </li>
       </ul>
@@ -108,7 +132,7 @@
           </a>
         </li>
       </ul>
-    </li>
+    </li> -->
     <li class="nav-item">
       <a href="{{ URL::to('admin/profil') }}" class="nav-link">
         <i class="nav-icon fas fa-users"></i>

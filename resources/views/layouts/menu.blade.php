@@ -39,6 +39,17 @@
         <li class="nav-item">
           <a class="nav-link text-dark font-weight-bold" href="{{ URL::to('login') }}">Login</a>
         </li>
+        <li class="nav-item">
+        </li>
+
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="PHOTOBOT"
+  agent-id="168c82e5-85f8-46e7-9829-6818d40f1ed4"
+  language-code="id"
+></df-messenger>
+
       </ul>
     </div>
   </div>
