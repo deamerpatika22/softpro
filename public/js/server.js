@@ -1,58 +1,58 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mysql = require('mysql');
 
-const app = express();
-app.use(bodyParser.json());
+// const bodyParser = require('body-parser');
+// const mysql = require('mysql');
 
-// Konfigurasi MySQL
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: ' ',
-    database: 'softproject'
-});
+// const app = express();
+// app.use(bodyParser.json());
 
-db.connect(err => {
-    if (err) throw err;
-    console.log('Connected to MySQL!');
-});
+// // Konfigurasi MySQL
+// const db = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: ' ',
+//     database: 'softproject'
+// });
 
-// Endpoint untuk webhook Dialogflow
-app.post('/webhook', (req, res) => {
-    const intent = req.body.queryResult.intent.displayName;
+// db.connect(err => {
+//     if (err) throw err;
+//     console.log('Connected to MySQL!');
+// });
 
-    if (intent === 'GetUserInfo') {
-        const name = req.body.queryResult.parameters.name;
+// // Endpoint untuk webhook Dialogflow
+// app.post('/webhook', (req, res) => {
+//     const intent = req.body.queryResult.intent.displayName;
 
-        db.query('SELECT * FROM users WHERE name = ?', [name], (err, result) => {
-            if (err) {
-                console.error(err);
-                return res.send({
-                    fulfillmentText: 'Maaf, ada kesalahan pada server.'
-                });
-            }
+//     if (intent === 'GetUserInfo') {
+//         const name = req.body.queryResult.parameters.name;
 
-            if (result.length > 0) {
-                const user = result[0];
-                res.send({
-                    fulfillmentText: Nama: ${user.name}, Email: ${user.email}
-                });
-            } else {
-                res.send({
-                    fulfillmentText: 'Data tidak ditemukan.'
-                });
-            }
-        });
-    } else {
-        res.send({
-            fulfillmentText: 'Intent tidak dikenali.'
-        });
-    }
-});
+//         db.query('SELECT * FROM users WHERE name = ?', [name], (err, result) => {
+//             if (err) {
+//                 console.error(err);
+//                 return res.send({
+//                     fulfillmentText: 'Maaf, ada kesalahan pada server.'
+//                 });
+//             }
 
-// Menjalankan server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(Server berjalan di port ${PORT});
-});
+//             if (result.length > 0) {
+//                 const user = result[0];
+//                 res.send({
+//                     fulfillmentText: Nama: ${user.name}, Email: ${user.email}
+//                 });
+//             } else {
+//                 res.send({
+//                     fulfillmentText: 'Data tidak ditemukan.'
+//                 });
+//             }
+//         });
+//     } else {
+//         res.send({
+//             fulfillmentText: 'Intent tidak dikenali.'
+//         });
+//     }
+// });
+
+// // Menjalankan server
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//     console.log(Server berjalan di port ${PORT});
+// });

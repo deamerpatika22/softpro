@@ -3,40 +3,13 @@
 <div class="container-fluid">
     <!-- Dashboard Overview -->
     <div class="row">
-        <!-- Order Card -->
-        <div class="col-6 col-lg-3">
-            <div class="small-box bg-light rounded shadow-sm border">
-                <div class="inner">
-                    <h3 class="text-dark">150</h3>
-                    <p class="text-muted">Order Baru</p>
-                </div>
-                <div class="icon">
-                    <i class="fas fa-camera-retro"></i>
-                </div>
-                <a href="#" class="small-box-footer text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-
-        <!-- Product Card -->
-        <div class="col-6 col-lg-3">
-            <div class="small-box bg-white rounded shadow-sm border">
-                <div class="inner">
-                    <h3 class="text-dark">150</h3>
-                    <p class="text-muted">Produk</p>
-                </div>
-                <div class="icon">
-                    <i class="fas fa-camera"></i>
-                </div>
-                <a href="#" class="small-box-footer text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
 
         <!-- Member Card -->
         <div class="col-6 col-lg-3">
             <div class="small-box bg-light rounded shadow-sm border">
                 <div class="inner">
-                    <h3 class="text-dark">150</h3>
-                    <p class="text-muted">Member</p>
+                    <h3 class="text-dark">15</h3>
+                    <p class="text-muted">Interaction</p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-users"></i>
@@ -50,7 +23,7 @@
             <div class="small-box bg-white rounded shadow-sm border">
                 <div class="inner">
                     <h3 class="text-dark">150</h3>
-                    <p class="text-muted">Transaksi</p>
+                    <p class="text-muted">Reserv</p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-credit-card"></i>

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,9 +25,16 @@ Route::get('/kontak',[App\Http\Controllers\HomePageController::class, 'kontak'])
 Route::get('/kategori', [\App\Http\Controllers\HomepageController::class, 'kategori']);
 
 
+
 Route::group(['prefix' => 'admin','middleware'=>'auth'], function() {
+
+
+
     Route::get('/', [\App\Http\Controllers\DashboardController::class, 'index'])->name('admin');
 
+    Route::post('/webhook', [\App\Http\Controllers\DialogflowWebhookController::class, 'handleWebhook']);
+
+    Route::resource('/history', \App\Http\Controllers\HistoryController::class,);
 
       //Tambahan route package kategori
       Route::resource('/kategori', \App\Http\Controllers\KategoriController::class);

@@ -3,7 +3,7 @@
     <!-- Logo dan nama aplikasi -->
     <a class="navbar-brand d-flex align-items-center font-weight-bold" href="/">
       <!-- Coba menggunakan url() jika asset() tidak berhasil -->
-      <img src="{{ asset('Logo/dea.png') }}" alt="Logo" style="height: 40px; margin-right: 10px;">
+      <img src="{{ asset('img/photobot.png') }}" alt="Logo" style="height: 40px; margin-right: 10px;">
     </a>
 
     <!-- Tombol hamburger untuk tampilan mobile -->
@@ -43,12 +43,12 @@
         </li>
 
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="PHOTOBOT"
-  agent-id="168c82e5-85f8-46e7-9829-6818d40f1ed4"
-  language-code="id"
-></df-messenger>
+          <df-messenger
+            intent="WELCOME"
+            chat-title="PHOTOBOT"
+            agent-id="168c82e5-85f8-46e7-9829-6818d40f1ed4"
+            language-code="id"
+        ></df-messenger>
 
       </ul>
     </div>
